@@ -147,3 +147,17 @@ C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\obj\Deb
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\obj\Debug\net6.0\Task1.pdb
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\obj\Debug\net6.0\Task1.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\obj\Debug\net6.0\ref\Task1.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\obj\Debug\net6.0\Task1.sourcelink.json
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Task1\bin\Debug\net6.0\Serilog.Sinks.File.dll

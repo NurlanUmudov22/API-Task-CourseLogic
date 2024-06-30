@@ -32,3 +32,4 @@ C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Repository\ob
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Repository\obj\Debug\net6.0\Repository.pdb
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Repository\obj\Debug\net6.0\Repository.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Repository\obj\Debug\net6.0\ref\Repository.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Repository\obj\Debug\net6.0\Repository.sourcelink.json

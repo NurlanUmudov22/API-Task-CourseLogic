@@ -1,4 +1,9 @@
-﻿using Services.DTOs.Admin.Students;
+﻿using AutoMapper;
+using Domain.Entities;
+using Microsoft.Extensions.Logging;
+using Repository.Repositories.Interfaces;
+using Services.DTOs.Admin.Groups;
+using Services.DTOs.Admin.Students;
 using Services.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,29 +15,92 @@ namespace Services.Services
 {
     public class StudentService : IStudentService
     {
-        public Task CreateAsync(StudentCreateDto model)
+        private readonly IStudentRepository _stuRepo;
+        private readonly IMapper _mapper;
+        private readonly ILogger<StudentService> _logger;
+
+
+        public StudentService(IStudentRepository stuRepo, IMapper mapper, ILogger<StudentService> logger)
         {
-            throw new NotImplementedException();
+
+            _stuRepo = stuRepo;
+            _mapper = mapper;
+            _logger = logger;
+
         }
 
-        public Task DeleteAsync(int? id)
+
+
+        public async Task CreateAsync(StudentCreateDto model)
         {
-            throw new NotImplementedException();
+            if (model == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            await _stuRepo.CreateAsync(_mapper.Map<Student>(model));
         }
 
-        public Task EditAsync(int? id, StudentEditDto model)
+
+
+        public async Task DeleteAsync(int? id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+            {
+                _logger.LogWarning("Id is null");
+                throw new ArgumentNullException();
+            }
+
+            var existStu = await _stuRepo.GetByIdAsync((int)id);
+
+            if (existStu == null)
+            {
+                _logger.LogWarning("data not found");
+
+                throw new NullReferenceException();
+
+            }            
+                _stuRepo.DeleteAsync(existStu);
+
+            
         }
 
-        public Task<IEnumerable<StudentDto>> GetAllAsync()
+
+
+
+        public async Task EditAsync(int? id, StudentEditDto model)
         {
-            throw new NotImplementedException();
+            ArgumentNullException.ThrowIfNull(nameof(id));
+
+            var existStu = await _stuRepo.GetByIdAsync((int)id);
+
+            if (existStu == null) throw new NullReferenceException();
+
+            _mapper.Map(model, existStu);
+
+            await _stuRepo.EditAsync(existStu);
         }
 
-        public Task<StudentDto> GetByIdAsync(int? id)
+
+
+
+        public async Task<IEnumerable<StudentDto>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<IEnumerable<StudentDto>>(await _stuRepo.GetAllAsync());
+        }
+
+
+
+
+        public async Task<StudentDto> GetByIdAsync(int? id)
+        {
+            if (id == null) throw new ArgumentNullException();
+
+            var existStu = await _stuRepo.GetByIdAsync((int)id);
+
+            if (existStu == null) throw new NullReferenceException();
+
+            return _mapper.Map<StudentDto>(existStu);
         }
     }
 }

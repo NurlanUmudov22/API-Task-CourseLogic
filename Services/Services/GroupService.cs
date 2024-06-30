@@ -38,12 +38,6 @@ namespace Services.Services
 
 
 
-
-
-
-
-
-
         public async  Task DeleteAsync(int? id)
         {
             if (id == null)

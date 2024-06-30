@@ -1,7 +1,12 @@
 using Microsoft.EntityFrameworkCore;
+using Repository;
 using Repository.Data;
+using Serilog;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 
@@ -16,8 +21,27 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 
 
+var logger = new LoggerConfiguration()
+        .ReadFrom.Configuration(builder.Configuration)
+        .Enrich.FromLogContext()
+        .CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
+
+
 
 builder.Services.AddSwaggerGen();
+
+
+
+
+builder.Services.AddRepositoryLayer();
+
+builder.Services.AddServiceLayer();
+
+
+
 
 var app = builder.Build();
 
@@ -27,6 +51,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+
 
 app.UseHttpsRedirection();
 

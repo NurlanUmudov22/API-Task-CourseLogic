@@ -32,3 +32,4 @@ C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Services\obj\
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Services\obj\Debug\net6.0\refint\Services.dll
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Services\obj\Debug\net6.0\Services.pdb
 C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Services\obj\Debug\net6.0\ref\Services.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\API\API-Course-Task\Services\obj\Debug\net6.0\Services.sourcelink.json
